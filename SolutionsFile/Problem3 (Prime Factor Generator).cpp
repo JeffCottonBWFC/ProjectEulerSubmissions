@@ -31,9 +31,11 @@ void PrimeFactors(long TestNumber){
 		}
 	}
 	
-	//Remaining TestNumber is prime, so add to PrimeFactors vector
-	PrimeFactors.resize(PrimeFactors.size()+1);
-	PrimeFactors[PrimeFactors.size()-1] = TestNumber;
+	//Remaining TestNumber is prime, so add to PrimeFactors vector (1 not prime)
+	if(TestNumber != 1){
+		PrimeFactors.resize(PrimeFactors.size()+1);
+		PrimeFactors[PrimeFactors.size()-1] = TestNumber;
+	}
 	
 	std::cout << "Prime factors are: " << PrimeFactors;
 }
