@@ -1,6 +1,9 @@
 #ifndef OperatorOverloads_h
 #define OperatorOverloads_h
 
+#include "mVector.h"
+#include "mMatrix.h"
+
 //Overloading Matrix/Vector Product
 MVector operator*(const MMatrix& A, const MVector& v){
 	MVector returnVect(A.Rows());
